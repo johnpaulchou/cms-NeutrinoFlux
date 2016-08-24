@@ -1,3 +1,6 @@
-#python script was initially generated with the following command and subsequently edited
+Calculate the neutrino flux through CMS
 
-cmsDriver.py Configuration/Generator/python/MinBias_13TeV_pythia8_cff.py -s GEN,SIM --conditions 80X_mcRun2_asymptotic_RealisticBS_25ns_13TeV2016_v1_mc --eventcontent RAWSIM --mc --no_exec
+Notes on files below
+
+python script in Analysis/test was initially generated with the following command and subsequently edited
+> cmsDriver.py Configuration/Generator/python/MinBias_13TeV_pythia8_cff.py -s GEN,SIM --conditions 80X_mcRun2_asymptotic_RealisticBS_25ns_13TeV2016_v1_mc --eventcontent RAWSIM --mc --no_exec
