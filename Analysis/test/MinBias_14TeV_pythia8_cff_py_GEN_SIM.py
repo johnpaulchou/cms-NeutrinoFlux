@@ -24,7 +24,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(1)
+    input = cms.untracked.int32(5)
 )
 
 # Input source
@@ -52,8 +52,8 @@ process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
         filterName = cms.untracked.string('')
     ),
     eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
-    fileName = cms.untracked.string('MinBias_13TeV_pythia8_cff_py_GEN_SIM.root'),
-    outputCommands = process.RAWSIMEventContent.outputCommands,
+    fileName = cms.untracked.string('MinBias_14TeV_pythia8_cff_py_GEN_SIM.root'),
+    outputCommands = cms.untracked.vstring("drop *", "keep *SimTrack*_*_*_*"),
     splitLevel = cms.untracked.int32(0)
 )
 
@@ -87,7 +87,7 @@ process.generator = cms.EDFilter("Pythia8GeneratorFilter",
             'ParticleDecays:tau0Max = 10', 
             'ParticleDecays:allowPhotonRadiation = on')
     ),
-    comEnergy = cms.double(13000.0),
+    comEnergy = cms.double(14000.0),
     crossSection = cms.untracked.double(71390000000.0),
     filterEfficiency = cms.untracked.double(1.0),
     maxEventsToPrint = cms.untracked.int32(0),
