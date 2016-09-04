@@ -1,6 +1,18 @@
 Calculate the neutrino flux through CMS
 
-Notes on files below
+1) Generate MinBias files with neutrino tracking by running
+> cmsRun MinBias_14TeV_pythia8_cff_py_GEN_SIM.py
+(alternatively, submit to crab via CrabConfigMinBias14.py)
 
+2) Make histograms based on output files with
+> cmsRun runNuFluxPlots_cfg.py
+Make sure that the files are correctly specified
+
+3) Draw histograms with plot output using the macro
+> root drawplots.C
+
+
+Various Notes:
 python script in Analysis/test was initially generated with the following command and subsequently edited
 > cmsDriver.py Configuration/Generator/python/MinBias_13TeV_pythia8_cff.py -s GEN,SIM --conditions 80X_mcRun2_asymptotic_RealisticBS_25ns_13TeV2016_v1_mc --eventcontent RAWSIM --mc --no_exec
+
